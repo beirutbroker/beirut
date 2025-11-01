@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #111;
   color: #fff; /* default text color for dark sections */
 }
 
@@ -66,19 +66,21 @@ nav a:hover {
 /* === Call To Action Button === */
 .cta {
   display: inline-block;
-  background-color: #6a0dad; /* royal purple */
-  color: white;
+  background-color: #6a0dad;      /* royal purple background */
+  color: #f0f8ff;                 /* light/fluorescent text */
+  text-shadow: 0 0 6px #e0b3ff;   /* subtle glow effect */
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease;
   margin-top: 1rem;
 }
 
 .cta:hover {
-  background-color: #4b0082; /* deeper purple */
+  background-color: #9b30ff; /* brighter purple on hover */
   transform: scale(1.05);
+  color: #ffffff;             /* keep text visible */
 }
 
 /* === Sections === */
@@ -128,45 +130,3 @@ footer {
   height: 100%;
   background: rgba(0,0,0,0.6);
   justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup-content {
-  background: white;
-  color: #111;
-  padding: 1rem 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  text-align: center;
-  max-width: 280px;
-  width: 80%;
-  height: auto;
-  position: relative;
-  animation: popIn 0.3s ease;
-}
-
-.popup-content a {
-  color: #6a0dad;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.popup-content a:hover {
-  color: #4b0082;
-  text-decoration: underline;
-}
-
-.close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #666;
-}
-
-@keyframes popIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
