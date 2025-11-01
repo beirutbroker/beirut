@@ -52,10 +52,10 @@ nav a:hover {
   background-image: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: cover;
+  background-size: cover;        /* fill the hero section */
   background-repeat: no-repeat;
-  background-position: center;
-  height: 50vh;
+  background-position: center;   /* center the image */
+  height: 50vh;                  /* adjust height as needed */
   display: flex;
   flex-direction: column;
   justify-content: center;
