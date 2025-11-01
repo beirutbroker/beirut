@@ -6,8 +6,8 @@ html {
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #111;
-  color: #fff; /* default text color for dark sections */
+  background-color: #111; /* default dark background */
+  color: #fff;            /* default text color */
 }
 
 /* === Header === */
@@ -47,10 +47,10 @@ nav a:hover {
   background-image: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: contain;        /* zoomed-out image */
+  background-size: contain;        /* zoomed-out */
   background-repeat: no-repeat;
   background-position: center;
-  height: 40vh;                    /* taller hero to show full image */
+  height: 40vh;                    /* show full image */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,15 +66,15 @@ nav a:hover {
 /* === Call To Action Button === */
 .cta {
   display: inline-block;
-  background-color: #6a0dad;       /* royal purple background */
-  color: #ffffff;                  /* fully white text */
-  text-shadow: 0 0 10px #ffffff;   /* strong fluorescent glow */
+  background-color: #6a0dad;       /* royal purple */
+  color: #ffffff;                  /* fully white fluorescent text */
+  text-shadow: 0 0 10px #ffffff;   /* subtle glow */
   padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  margin-top: 2rem;                /* move the button lower */
+  margin-top: 2.5rem;              /* lowered button */
   text-align: center;
   transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease;
 }
@@ -82,10 +82,50 @@ nav a:hover {
 .cta:hover {
   background-color: #9b30ff;       /* brighter purple on hover */
   transform: scale(1.05);
-  color: #ffffff;                  /* keep text white on hover */
+  color: #ffffff;                  /* keep text white */
 }
+
+/* === Sections === */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.about, .contact {
+  background-color: #111;          /* black background */
+  color: #fff;                     /* white text */
+  margin: 1.5rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Section links */
+.about a, .contact a {
+  color: #6a0dad;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.about a:hover, .contact a:hover {
+  color: #4b0082;
+  text-decoration: underline;
+}
+
+/* === Footer === */
+footer {
+  background-color: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* === Popup === */
 .popup {
-  display: none;       /* HIDDEN until button is clicked */
+  display: none;                  /* hidden by default */
   position: fixed;
   top: 0;
   left: 0;
@@ -97,4 +137,33 @@ nav a:hover {
   z-index: 1000;
 }
 
+.popup-content {
+  background: white;
+  color: #111;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  text-align: center;
+  max-width: 280px;
+  width: 80%;
+  height: auto;
+  position: relative;
+  animation: popIn 0.3s ease;
+}
 
+.popup-content a {
+  color: #6a0dad;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.popup-content a:hover {
+  color: #4b0082;
+  text-decoration: underline;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  fo
