@@ -7,7 +7,7 @@ body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #f4f4f4;
-  color: #222;
+  color: #fff; /* default text color for dark sections */
 }
 
 /* === Header === */
@@ -43,33 +43,27 @@ nav a:hover {
 }
 
 /* === Hero Section === */
-/* === Sections === */
-.hero, .about, .contact {
-  background: #111;      /* black background */
-  color: #fff;           /* white text */
-  margin: 1.5rem 0;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.hero {
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
+  background-size: contain;        /* zoomed-out image */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 40vh;                    /* taller hero to show full image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
-
-/* Optional: make links visible with purple accent */
-.hero a, .about a, .contact a {
-  color: #6a0dad;        /* royal purple links */
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.hero a:hover, .about a:hover, .contact a:hover {
-  color: #4b0082;        /* deeper purple on hover */
-  text-decoration: underline;
-}
-
 
 .hero h1 span {
   color: #ccc;
 }
 
+/* === Call To Action Button === */
 .cta {
   display: inline-block;
   background-color: #6a0dad; /* royal purple */
@@ -79,28 +73,39 @@ nav a:hover {
   text-decoration: none;
   font-weight: 600;
   transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1rem;
 }
 
 .cta:hover {
-  background-color: #4b0082; /* deeper purple on hover */
+  background-color: #4b0082; /* deeper purple */
   transform: scale(1.05);
 }
 
 /* === Sections === */
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.about, .contact {
-  background: white;
+.hero, .about, .contact {
+  background: #111;      /* black background for all sections */
+  color: #fff;           /* white text */
   margin: 1.5rem 0;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  min-height: 60vh;           /* gives scroll space */
-  scroll-margin-top: 80px;    /* prevents header overlap */
+}
+
+.about, .contact {
+  min-height: 60vh;           /* space for scrolling */
+  scroll-margin-top: 80px;    /* prevent header overlap */
+}
+
+/* Links inside sections */
+.hero a, .about a, .contact a {
+  color: #6a0dad;        /* royal purple links */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero a:hover, .about a:hover, .contact a:hover {
+  color: #4b0082;        /* deeper purple on hover */
+  text-decoration: underline;
 }
 
 /* === Footer === */
@@ -113,7 +118,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* === Popup === */
 /* === Popup === */
 .popup {
   display: none;
@@ -131,34 +135,38 @@ footer {
 .popup-content {
   background: white;
   color: #111;
-  padding: 1rem 1.5rem;   /* smaller padding */
+  padding: 1rem 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   text-align: center;
-  max-width: 280px;       /* slightly narrower */
+  max-width: 280px;
   width: 80%;
-  height: auto;           /* let height fit content */
+  height: auto;
   position: relative;
   animation: popIn 0.3s ease;
 }
 
-.about {
-  background: #111;      /* black background */
-  color: #fff;           /* white text */
-  margin: 1.5rem 0;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-/* Optional: make links inside About white too */
-.about a {
-  color: #6a0dad;        /* purple links to match CTA */
+.popup-content a {
+  color: #6a0dad;
+  font-weight: bold;
   text-decoration: none;
 }
 
-.about a:hover {
-  text-decoration: underline;
+.popup-content a:hover {
   color: #4b0082;
+  text-decoration: underline;
 }
 
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
