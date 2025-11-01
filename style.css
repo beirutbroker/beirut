@@ -39,7 +39,8 @@ nav a:hover {
 .hero {
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
                     url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: cover;
+  background-size: 80%;  /* zoomed out image */
+  background-repeat: no-repeat;
   background-position: center;
   height: 25vh;
   display: flex;
@@ -49,6 +50,7 @@ nav a:hover {
   text-align: center;
   color: white;
 }
+
 
 .hero h1 span {
   color: #ccc;
