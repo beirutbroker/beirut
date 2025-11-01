@@ -6,8 +6,8 @@ html {
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #111; /* dark background */
-  color: #fff;            /* default text color */
+  background-color: #111;
+  color: #fff;
   line-height: 1.6;
 }
 
@@ -33,7 +33,7 @@ header {
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #6a0dad; /* purple accent */
+  color: #6a0dad;
 }
 
 nav a {
@@ -48,15 +48,14 @@ nav a:hover {
 }
 
 /* === Hero Section === */
-./* === Hero Section === */
 .hero {
   background-image: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: cover;           /* fill the hero area */
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center; /* center image on desktop */
-  height: 60vh;                     /* desktop height */
+  background-position: center center;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,27 +65,16 @@ nav a:hover {
   padding: 0 1rem;
 }
 
-/* === Mobile Adjustments === */
-@media (max-width: 600px) {
-  .hero {
-    height: 50vh;                    /* shorter hero on mobile */
-    background-size: cover;           /* still fill the section */
-    background-position: top center;  /* focus on top part for mobile cropping */
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;               /* smaller text on mobile */
-  }
-
-  .hero .cta {
-    font-size: 0.9rem;               /* smaller button */
-    padding: 10px 20px;
-    margin-top: 1.5rem;
-  }
+.hero h1 {
+  font-size: 2rem;
+  margin: 0;
 }
 
+.hero h1 span {
+  color: #ccc;
+}
 
-/* === Call To Action Button === */
+/* === CTA Button === */
 .cta {
   display: inline-block;
   background-color: #6a0dad;
@@ -96,7 +84,7 @@ nav a:hover {
   border-radius: 6px;
   font-weight: 600;
   font-size: 1rem;
-  margin-top: 11rem;
+  margin-top: 2rem; /* adjusted for proper positioning */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -192,30 +180,36 @@ footer {
 
 /* === Mobile Adjustments === */
 @media (max-width: 600px) {
+  /* Header layout */
   header {
-    flex-direction: row;          /* keep logo and nav in a row */
-    justify-content: space-between; /* spread logo and links */
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1rem;         /* reduce padding for small screens */
+    padding: 0.5rem 1rem;
   }
 
   .logo {
-    font-size: 1.1rem;            /* smaller logo */
+    font-size: 1.1rem;
   }
 
   nav {
     display: flex;
-    flex-direction: row;           /* horizontal links */
-    flex-wrap: nowrap;             /* prevent wrapping */
+    flex-direction: row;
+    flex-wrap: nowrap;
   }
 
   nav a {
-    font-size: 0.85rem;            /* smaller links */
-    margin-left: 0.7rem;           /* space between links */
-    white-space: nowrap;            /* prevent text wrapping */
+    font-size: 0.85rem;
+    margin-left: 0.7rem;
+    white-space: nowrap;
   }
-}
 
+  /* Hero adjustments */
+  .hero {
+    height: 50vh;
+    background-size: cover;
+    background-position: top center;
+  }
 
   .hero h1 {
     font-size: 1.5rem;
@@ -227,6 +221,7 @@ footer {
     margin-top: 1.5rem;
   }
 
+  /* Main and sections */
   main {
     margin: 1rem auto;
     padding: 0 0.5rem;
