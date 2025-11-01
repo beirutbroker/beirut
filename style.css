@@ -134,3 +134,23 @@ footer {
   animation: popIn 0.3s ease;
 }
 
+.about {
+  background: #111;      /* black background */
+  color: #fff;           /* white text */
+  margin: 1.5rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Optional: make links inside About white too */
+.about a {
+  color: #6a0dad;        /* purple links to match CTA */
+  text-decoration: none;
+}
+
+.about a:hover {
+  text-decoration: underline;
+  color: #4b0082;
+}
+
