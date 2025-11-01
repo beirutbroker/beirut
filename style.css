@@ -6,8 +6,13 @@ html {
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #111; /* default dark background */
+  background-color: #111; /* dark background */
   color: #fff;            /* default text color */
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
 }
 
 /* === Header === */
@@ -28,12 +33,12 @@ header {
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
+  color: #6a0dad; /* purple accent */
 }
 
 nav a {
   color: white;
   margin-left: 1rem;
-  text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
 }
@@ -47,16 +52,22 @@ nav a:hover {
   background-image: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: contain;        /* zoomed-out */
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 40vh;                    /* show full image */
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  padding: 0 1rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin: 0;
 }
 
 .hero h1 span {
@@ -66,26 +77,23 @@ nav a:hover {
 /* === Call To Action Button === */
 .cta {
   display: inline-block;
-  background-color: #6a0dad;       /* royal purple */
-  color: #ffffff;                  /* fully white fluorescent text */
-  text-shadow: 0 0 10px #ffffff;   /* subtle glow */
+  background-color: #6a0dad;
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
   padding: 12px 24px;
   border-radius: 6px;
-  text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
-  margin-top: 1rem;              /* lowered button */
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta:hover {
-  background-color: #9b30ff;       /* brighter purple on hover */
+  background-color: #9b30ff;
   transform: scale(1.05);
-  color: #ffffff;                  /* keep text white */
 }
 
-/* === Sections === */
+/* === Main Content === */
 main {
   max-width: 900px;
   margin: 2rem auto;
@@ -93,19 +101,17 @@ main {
 }
 
 .about, .contact {
-  background-color: #111;          /* black background */
-  color: #fff;                     /* white text */
+  background-color: #111;
+  color: #fff;
   margin: 1.5rem 0;
-  padding: 6rem;
+  padding: 4rem 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* Section links */
 .about a, .contact a {
   color: #6a0dad;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .about a:hover, .contact a:hover {
@@ -125,7 +131,7 @@ footer {
 
 /* === Popup === */
 .popup {
-  display: none;                  /* hidden by default */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -138,15 +144,14 @@ footer {
 }
 
 .popup-content {
-  background: white;
+  background: #fff;
   color: #111;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   text-align: center;
-  max-width: 280px;
+  max-width: 300px;
   width: 80%;
-  height: auto;
   position: relative;
   animation: popIn 0.3s ease;
 }
@@ -154,16 +159,54 @@ footer {
 .popup-content a {
   color: #6a0dad;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .popup-content a:hover {
   color: #4b0082;
-  text-decoration: underline;
 }
 
 .close {
   position: absolute;
   top: 8px;
   right: 12px;
-  fo
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+@keyframes popIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* === Mobile Adjustments === */
+@media (max-width: 600px) {
+  .hero {
+    height: 50vh;
+    background-size: cover;
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+  }
+
+  main {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .about, .contact {
+    padding: 3rem 1.5rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0.8rem 0;
+  }
+}
