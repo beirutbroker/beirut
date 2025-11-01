@@ -123,26 +123,14 @@ footer {
 .popup-content {
   background: white;
   color: #111;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;   /* smaller padding */
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   text-align: center;
-  max-width: 300px;
+  max-width: 280px;       /* slightly narrower */
   width: 80%;
+  height: auto;           /* let height fit content */
+  position: relative;
   animation: popIn 0.3s ease;
-}
-
-.close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  color: #666;
-}
-
-@keyframes popIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
 }
 
