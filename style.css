@@ -181,24 +181,29 @@ footer {
 /* === Mobile Adjustments === */
 @media (max-width: 600px) {
   header {
-    flex-direction: column; /* stack logo and nav vertically */
+    flex-direction: row;          /* keep logo and nav in a row */
+    justify-content: space-between; /* spread logo and links */
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem 1rem;         /* reduce padding for small screens */
+  }
+
+  .logo {
+    font-size: 1.1rem;            /* smaller logo */
   }
 
   nav {
-    margin-top: 0.5rem;
     display: flex;
-    flex-direction: row; /* keep links in a row */
-    flex-wrap: wrap;     /* allow wrapping if needed */
-    justify-content: center;
+    flex-direction: row;           /* horizontal links */
+    flex-wrap: nowrap;             /* prevent wrapping */
   }
 
   nav a {
-    margin: 0.3rem 0.5rem; /* space between links */
-    font-size: 0.9rem;
+    font-size: 0.85rem;            /* smaller links */
+    margin-left: 0.7rem;           /* space between links */
+    white-space: nowrap;            /* prevent text wrapping */
   }
 }
+
 
   .hero h1 {
     font-size: 1.5rem;
