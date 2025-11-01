@@ -43,7 +43,7 @@ nav a:hover {
 
 /* Hero section */
 .hero {
-  background-image: url("https://github.com/beirutbroker/beirut/blob/main/background.jpg?raw=true");
+  background-image: url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,7 +54,9 @@ nav a:hover {
   align-items: center;
   color: white;
   text-align: center;
+  position: relative;
 }
+
 
 .hero h1 {
   font-size: 2.5rem;
