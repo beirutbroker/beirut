@@ -67,5 +67,21 @@ nav a:hover {
 .cta {
   display: inline-block;
   background-color: #6a0dad;       /* royal purple */
-  color: #f0f8ff;                  /* light/fluorescent text */
-  text-shado
+  color: #ffffff;                  /* bright white text */
+  text-shadow: 0 0 8px #ffffff;    /* subtle fluorescent glow */
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;                 /* readable text */
+  transition: background-color 0.3s ease, transform 0.2s ease, color 0.2s ease;
+  margin-top: 1rem;
+  text-align: center;              /* center text */
+}
+
+.cta:hover {
+  background-color: #9b30ff;       /* brighter purple on hover */
+  transform: scale(1.05);
+  color: #ffffff;                  /* keep hover text white */
+}
+
