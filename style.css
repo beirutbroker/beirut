@@ -43,20 +43,28 @@ nav a:hover {
 }
 
 /* === Hero Section === */
-.hero {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-                    url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: 120%; /* Zoom-out effect */
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 25vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
+/* === Sections === */
+.hero, .about, .contact {
+  background: #111;      /* black background */
+  color: #fff;           /* white text */
+  margin: 1.5rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
+
+/* Optional: make links visible with purple accent */
+.hero a, .about a, .contact a {
+  color: #6a0dad;        /* royal purple links */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero a:hover, .about a:hover, .contact a:hover {
+  color: #4b0082;        /* deeper purple on hover */
+  text-decoration: underline;
+}
+
 
 .hero h1 span {
   color: #ccc;
