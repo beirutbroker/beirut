@@ -48,14 +48,15 @@ nav a:hover {
 }
 
 /* === Hero Section === */
+./* === Hero Section === */
 .hero {
   background-image: 
     linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
     url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: cover;        /* fill the hero section */
+  background-size: cover;           /* fill the hero area */
   background-repeat: no-repeat;
-  background-position: center;   /* center the image */
-  height: 50vh;                  /* adjust height as needed */
+  background-position: center center; /* center image on desktop */
+  height: 60vh;                     /* desktop height */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,14 +66,25 @@ nav a:hover {
   padding: 0 1rem;
 }
 
-.hero h1 {
-  font-size: 2rem;
-  margin: 0;
+/* === Mobile Adjustments === */
+@media (max-width: 600px) {
+  .hero {
+    height: 50vh;                    /* shorter hero on mobile */
+    background-size: cover;           /* still fill the section */
+    background-position: top center;  /* focus on top part for mobile cropping */
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;               /* smaller text on mobile */
+  }
+
+  .hero .cta {
+    font-size: 0.9rem;               /* smaller button */
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+  }
 }
 
-.hero h1 span {
-  color: #ccc;
-}
 
 /* === Call To Action Button === */
 .cta {
