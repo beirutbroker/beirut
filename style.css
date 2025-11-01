@@ -56,18 +56,20 @@ nav a:hover {
 
 .cta {
   display: inline-block;
-  background-color: #222;
+  background-color: #6a0dad; /* royal purple */
   color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 6px;
   text-decoration: none;
-  margin-top: 10px;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta:hover {
-  background-color: #555;
+  background-color: #4b0082; /* deeper purple on hover */
+  transform: scale(1.05);
 }
+
 
 /* === Sections === */
 main {
