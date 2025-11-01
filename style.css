@@ -1,8 +1,8 @@
+/* === Global Styles === */
 html {
   scroll-behavior: smooth;
 }
 
-/* === Global Styles === */
 body {
   margin: 0;
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -12,6 +12,9 @@ body {
 
 /* === Header === */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #111;
   color: white;
   display: flex;
@@ -41,11 +44,11 @@ nav a:hover {
 
 /* === Hero Section === */
 .hero {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
                     url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: 80%;  /* zoomed out image */
-  background-repeat: no-repeat;
+  background-size: 120%; /* Zoom-out effect */
   background-position: center;
+  background-repeat: no-repeat;
   height: 25vh;
   display: flex;
   flex-direction: column;
@@ -54,7 +57,6 @@ nav a:hover {
   text-align: center;
   color: white;
 }
-
 
 .hero h1 span {
   color: #ccc;
@@ -76,7 +78,6 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-
 /* === Sections === */
 main {
   max-width: 900px;
@@ -90,6 +91,8 @@ main {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  min-height: 60vh;           /* gives scroll space */
+  scroll-margin-top: 80px;    /* prevents header overlap */
 }
 
 /* === Footer === */
@@ -112,43 +115,5 @@ footer {
   height: 100%;
   background: rgba(0,0,0,0.7);
   justify-content: center;
-  align-it
-
-    align-items: center;
-  z-index: 9999;
+  align-items: center;
 }
-
-.popup-content {
-  background: #fff;
-  color: #111;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-  max-width: 300px;
-  text-align: center;
-  position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #555;
-}
-
-.close:hover {
-  color: #000;
-}
-
-.popup-content a {
-  color: #6a0dad;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.popup-content a:hover {
-  color: #4b0082;
-}
-
