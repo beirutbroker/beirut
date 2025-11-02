@@ -80,11 +80,12 @@ nav a:hover {
   background-color: #6a0dad;
   color: #fff;
   text-shadow: 0 0 10px #fff;
-  padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: 600;
-  font-size: 1rem;
-  margin-top: 2rem; /* adjusted for proper positioning */
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-top: 80px;                 /* lowered further down */
+  margin-bottom: 40px;              /* extra spacing below before heading */
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
