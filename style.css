@@ -40,12 +40,20 @@ nav a {
   color: white;
   margin-left: 1rem;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  padding-bottom: 4px;
 }
 
 nav a:hover {
-  color: #aaa;
+  color: #6a0dad;
 }
+
+/* Active link color (when clicked or currently selected) */
+nav a.active {
+  color: #6a0dad;
+  border-bottom: 2px solid #6a0dad;
+}
+
 
 /* === Hero Section === */
 .hero {
