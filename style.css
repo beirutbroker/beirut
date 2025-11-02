@@ -84,8 +84,8 @@ nav a:hover {
   border-radius: 8px;
   font-weight: 700;
   font-size: 1.1rem;
-  margin-top: 80px;                 /* lowered further down */
-  margin-bottom: 40px;              /* extra spacing below before heading */
+  margin-top: 110px;               /* lowered further down */
+  margin-bottom: 50px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
