@@ -20,224 +20,119 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: #111;
-  color: white;
+  background-color: #000;
+  color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 .logo {
   font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
-  color: #6a0dad;
+  color: #b19cd9; /* light purple accent */
 }
 
 nav a {
-  color: white;
-  margin-left: 1rem;
+  color: #fff;
+  margin-left: 1.2rem;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #aaa;
+  color: #b19cd9;
 }
 
-/* === Hero Section === */
-.hero {
-  background-image: 
-    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-    url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 1rem;
+/* === Button Below Header === */
+.call-below-header {
+  text-align: right;
+  padding: 0.8rem 2rem;
+  background-color: #000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.4);
 }
 
-.hero h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-.hero h1 span {
-  color: #ccc;
-}
-
-/* === CTA Button === */
+/* === CTA Button (Call Us) === */
 .cta {
   display: inline-block;
   background-color: #6a0dad;
   color: #fff;
-  text-shadow: 0 0 10px #fff;
+  text-shadow: 0 0 12px #fff;
   padding: 12px 28px;
   border-radius: 8px;
   font-weight: 700;
   font-size: 1.1rem;
-  margin-top: 110px;               /* lowered further down */
-  margin-bottom: 50px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .cta:hover {
   background-color: #9b30ff;
-  transform: scale(1.05);
+  transform: scale(1.08);
+}
+
+/* === Hero Section === */
+.hero {
+  background-image:
+    linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://raw.githubusercontent.com/beirutbroker/beirut/main/background.jpg");
+  background-size: 120%; /* zoomed out */
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+}
+
+.hero h1 span {
+  color: #b19cd9; /* purple for Beirut Broker */
 }
 
 /* === Main Content === */
 main {
   max-width: 900px;
-  margin: 2rem auto;
+  margin: 3rem auto;
   padding: 0 1rem;
 }
 
 .about, .contact {
-  background-color: #111;
+  background-color: #000;
   color: #fff;
-  margin: 1.5rem 0;
+  margin: 2rem 0;
   padding: 4rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.about h2, .contact h2 {
+  color: #b19cd9;
+  margin-bottom: 1rem;
 }
 
 .about a, .contact a {
-  color: #6a0dad;
+  color: #b19cd9;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 .about a:hover, .contact a:hover {
-  color: #4b0082;
+  color: #d8b0ff;
   text-decoration: underline;
 }
 
-/* === Footer === */
-footer {
-  background-color: #111;
-  color: #ccc;
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  margin-top: 2rem;
-}
-
-/* === Popup === */
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.popup-content {
-  background: #fff;
-  color: #111;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  text-align: center;
-  max-width: 300px;
-  width: 80%;
-  position: relative;
-  animation: popIn 0.3s ease;
-}
-
-.popup-content a {
-  color: #6a0dad;
-  font-weight: bold;
-}
-
-.popup-content a:hover {
-  color: #4b0082;
-}
-
-.close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-@keyframes popIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-/* === Mobile Adjustments === */
-@media (max-width: 600px) {
-  /* Header layout */
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-  }
-
-  .logo {
-    font-size: 1.1rem;
-  }
-
-  nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  nav a {
-    font-size: 0.85rem;
-    margin-left: 0.7rem;
-    white-space: nowrap;
-  }
-
-  /* Hero adjustments */
-  .hero {
-    height: 50vh;
-    background-size: cover;
-    background-position: top center;
-  }
-
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .cta {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-    margin-top: 1.5rem;
-  }
-
-  /* Main and sections */
-  main {
-    margin: 1rem auto;
-    padding: 0 0.5rem;
-  }
-
-  .about, .contact {
-    padding: 3rem 1.5rem;
-  }
-
-  footer {
-    font-size: 0.8rem;
-    padding: 0.8rem 0;
-  }
-}
-/* === Services Page === */
+/* === Services Section === */
 .services {
   max-width: 900px;
   margin: 3rem auto;
@@ -251,7 +146,7 @@ footer {
 
 .services h1 {
   font-size: 2rem;
-  color: #b19cd9; /* light purple accent */
+  color: #b19cd9;
   margin-bottom: 1rem;
 }
 
@@ -273,4 +168,65 @@ footer {
 
 .service h2 {
   color: #b19cd9;
+}
+
+/* === Footer === */
+footer {
+  background-color: #000;
+  color: #ccc;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* === Mobile Adjustments === */
+@media (max-width: 600px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  nav a {
+    font-size: 0.85rem;
+    margin-left: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .call-below-header {
+    text-align: center;
+    padding: 1rem 1rem;
+  }
+
+  .cta {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .hero {
+    height: 70vh;
+    background-size: cover; /* mobile optimized */
+    background-position: top center;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding: 0.8rem 0;
+  }
 }
