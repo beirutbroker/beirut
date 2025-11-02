@@ -70,16 +70,11 @@ nav a:hover {
   margin: 0;
 }
 
-/* 💜 Fluorescent purple “Beirut Broker” text */
 .hero h1 span {
-  color: #bf40ff; /* vibrant fluorescent purple */
-  text-shadow: 
-    0 0 5px #bf40ff,
-    0 0 10px #bf40ff,
-    0 0 20px #bf40ff,
-    0 0 40px #b000ff;
+  color: #6a0dad; /* solid purple */
   font-weight: 700;
 }
+
 
 
 /* === CTA Button === */
