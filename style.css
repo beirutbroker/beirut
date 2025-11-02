@@ -236,3 +236,40 @@ footer {
     padding: 0.8rem 0;
   }
 }
+/* === Services Page === */
+.services {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #111;
+  color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-align: center;
+}
+
+.services h1 {
+  font-size: 2rem;
+  color: #b19cd9; /* light purple accent */
+  margin-bottom: 1rem;
+}
+
+.service-list {
+  margin-top: 2rem;
+}
+
+.service {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #1c1c1c;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service h2 {
+  color: #b19cd9;
+}
