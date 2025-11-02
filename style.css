@@ -29,29 +29,6 @@ header {
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Call Us Now button just below header */
-.call-below-header {
-  text-align: right;          /* aligns it under the Contact link */
-  padding: 0.5rem 2rem;       /* space from edges */
-  background-color: #111;     /* match header color */
-}
-
-.call-below-header .cta {
-  background-color: #6a0dad;
-  color: #fff;
-  text-shadow: 0 0 8px #d8b0ff;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.call-below-header .cta:hover {
-  background-color: #9b30ff;
-  transform: scale(1.05);
-}
-
 .logo {
   font-size: 1.3rem;
   font-weight: bold;
